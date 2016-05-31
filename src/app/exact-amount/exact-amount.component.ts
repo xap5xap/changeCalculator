@@ -4,24 +4,23 @@ import {CalculateChangeService} from '../services/calculate-change.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-i-will-pay',
-  templateUrl: 'i-will-pay.component.html',
-  styleUrls: ['i-will-pay.component.css'],
+  selector: 'app-exact-amount',
+  templateUrl: 'exact-amount.component.html',
+  styleUrls: ['exact-amount.component.css'],
   providers: [CalculateChangeService]
 })
-export class IWillPayComponent implements OnInit {
+export class ExactAmountComponent implements OnInit {
 
   payment: Payment;
+  desiredChange: number;
   constructor(private calculateChangeService: CalculateChangeService) {
     this.payment = new Payment();
   }
 
   ngOnInit() {
-
   }
 
-  getChange() {
-    return this.calculateChangeService.calculateChange(this.payment);
+  calculatePaymentAmount() {
+    return this.calculateChangeService.calculatePaymentAmmount(this.payment, this.desiredChange);
   }
-
 }
