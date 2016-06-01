@@ -1,14 +1,14 @@
-<div>
-  <div class="input-group">
-    <span class="input-group-addon">Price $</span>
-    <input type="text" class="form-control" [(ngModel)]="payment.price" aria-label="Amount (to the nearest dollar)">
-    <span class="input-group-addon">.00</span>
-  </div>
-</div>
-<div>
-  <div class="input-group">
-    <span class="input-group-addon">Bills</span>
-    <input type="text" class="form-control" [(ngModel)]="desiredChange" aria-label="Amount (to the nearest dollar)">
-  </div>
-</div>
-<p><span>You have to pay {{calculatePaymentAmount()}}</span></p>
+<md-card class="demo-card demo-basic">
+  <md-toolbar color="primary">Exact amount to pay</md-toolbar>
+  <md-card-content>
+    <md-input class="demo-full-width" placeholder="Price $" [(ngModel)]="payment.price">
+      <span md-suffix>$</span>
+    </md-input>
+    <md-input class="demo-full-width" placeholder="Exact change amount desired" [(ngModel)]="desiredChange">
+      <span md-suffix>$</span></md-input>
+    <p><span>
+      You have to pay <i> <strong>{{calculatePaymentAmount()}}$</strong></i>
+    </span>
+    </p>
+  </md-card-content>
+</md-card>

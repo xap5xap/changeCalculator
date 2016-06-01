@@ -15,8 +15,8 @@ describe('App: ChangeCalculator', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should have as title \'change-calculator works!\'',
-      inject([ChangeCalculatorAppComponent], (app: ChangeCalculatorAppComponent) => {
-    expect(app.title).toEqual('change-calculator works!');
-  }));
+  // it('should have as title \'change-calculator works!\'',
+  //     inject([ChangeCalculatorAppComponent], (app: ChangeCalculatorAppComponent) => {
+  //   expect(app.title).toEqual('change-calculator works!');
+  // }));
 });

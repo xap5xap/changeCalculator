@@ -1,5 +1,27 @@
-<h1>
-  {{title}}
-</h1>
-<app-i-will-pay></app-i-will-pay>
-<app-exact-amount></app-exact-amount>
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    <md-nav-list *shellNoRender>
+      <a md-list-item>
+        <md-icon md-list-icon>accessibility</md-icon>
+        <span md-line>Change</span>
+        <span md-line>Based on payment amount</span>
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>home</md-icon>
+        <span md-line>Pay</span>
+        <span md-line>Based on change desired</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+      </svg>
+    </button>
+    Change calculator!!
+  </md-toolbar>
+
+  <app-i-will-pay></app-i-will-pay>
+  <app-exact-amount></app-exact-amount>
+</md-sidenav-layout>
