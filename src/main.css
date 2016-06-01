@@ -10,3 +10,6 @@
 .demo-basic md-card-content {
   padding: 16px;
 }
+.secondary {
+    color: rgba(0,0,0,0.54);
+}

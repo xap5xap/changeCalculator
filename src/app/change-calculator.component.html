@@ -4,20 +4,18 @@
       <a md-list-item>
         <md-icon md-list-icon>accessibility</md-icon>
         <span md-line>Change</span>
-        <span md-line>Based on payment amount</span>
+        <span md-line class="secondary">Based on payment amount</span>
       </a>
       <a md-list-item>
         <md-icon md-list-icon>home</md-icon>
         <span md-line>Pay</span>
-        <span md-line>Based on change desired</span>
+        <span md-line class="secondary">Based on change desired</span>
       </a>
     </md-nav-list>
   </md-sidenav>
   <md-toolbar color="primary">
     <button md-icon-button (click)="sidenav.open()">
-      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-      </svg>
+      <md-icon>menu</md-icon>      
     </button>
     Change calculator!!
   </md-toolbar>
